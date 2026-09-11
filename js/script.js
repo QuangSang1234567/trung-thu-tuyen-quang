@@ -424,11 +424,9 @@ function handleSwipe() {
 
   if (distance < 0) {
     if (currentIndex < photos.length - 1) {
-      // Chưa đến ảnh cuối
       currentIndex++;
       updateGallery();
     } else {
-      // Đã ở ảnh cuối -> sang màn hình tiếp theo
       showScreen(currentScreen + 1);
     }
   }
@@ -438,11 +436,9 @@ function handleSwipe() {
   // ================================
   else {
     if (currentIndex > 0) {
-      // Chưa ở ảnh đầu
       currentIndex--;
       updateGallery();
     } else {
-      // Đang ở ảnh đầu -> về màn hình trước
       showScreen(currentScreen - 1);
     }
   }
