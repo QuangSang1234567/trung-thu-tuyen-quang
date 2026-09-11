@@ -1240,3 +1240,45 @@ p {
     scroll-behavior: auto !important;
   }
 }
+.continue-gallery-btn {
+  display: block;
+  margin: 18px auto 0;
+  padding: 11px 30px;
+
+  border: 1px solid rgba(255, 215, 106, 0.7);
+  border-radius: 999px;
+
+  background: rgba(255, 215, 106, 0.08);
+  color: #ffd76a;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.continue-gallery-btn:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 215, 106, 0.16);
+  box-shadow: 0 8px 25px rgba(255, 215, 106, 0.18);
+}
+
+.continue-gallery-btn:active {
+  transform: scale(0.96);
+}
+
+@media (max-width: 700px) {
+  .continue-gallery-btn {
+    margin-top: 15px;
+    padding: 10px 26px;
+    font-size: 13px;
+  }
+}
