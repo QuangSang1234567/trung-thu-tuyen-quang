@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <meta
+      name="description"
+      content="Một đêm Trung Thu đặc biệt dành cho một người đặc biệt."
+    />
+
+    <title>Trung Thu Có Em 🌕</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
+
+    <div class="background">
+      <div class="moon">
+        <div class="moon-glow"></div>
+      </div>
+
+      <div class="stars" id="stars"></div>
+
+      <div class="lantern lantern-1">
+        <span></span>
+      </div>
+
+      <div class="lantern lantern-2">
+        <span></span>
+      </div>
+
+      <div class="lantern lantern-3">
+        <span></span>
+      </div>
+
+      <div class="ground-glow"></div>
+    </div>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <div class="progress">
+      <span class="progress-dot active"></span>
+      <span class="progress-dot"></span>
+      <span class="progress-dot"></span>
+      <span class="progress-dot"></span>
+      <span class="progress-dot"></span>
+    </div>
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main id="app">
+      <!-- =================================
+             SCREEN 1
+        ================================== -->
+
+      <section class="screen hero-screen active">
+        <div class="hero-content">
+          <p class="small-title">TRUNG THU TẠI TUYÊN QUANG</p>
+
+          <h1>
+            Đêm nay...
+            <br />
+
+            <span>có một điều đặc biệt</span>
+          </h1>
+
+          <p class="hero-description">
+            Trung Thu năm nay, anh muốn dành một điều đặc biệt cho một người đặc
+            biệt.
+          </p>
+
+          <button class="main-button" data-next>
+            MỞ RA
+            <span>❤</span>
+          </button>
+
+          <p class="scroll-hint">kéo xuống nhé ↓</p>
+        </div>
+      </section>
+
+      <!-- =================================
+             SCREEN 2
+        ================================== -->
+
+      <section class="screen gallery-screen">
+        <div class="section-heading">
+          <p class="small-title">GIỮA ĐÊM TRĂNG</p>
+
+          <h2>Anh chợt nhận ra...</h2>
+
+          <p>Có một người khiến ánh đèn Trung Thu trở nên đẹp hơn.</p>
+        </div>
+
+        <!-- 3D GALLERY -->
+
+        <div class="gallery-wrapper">
+          <button
+            class="gallery-button prev"
+            id="prevBtn"
+            aria-label="Ảnh trước"
+          >
+            ‹
+          </button>
+
+          <div class="gallery" id="gallery"></div>
+
+          <button
+            class="gallery-button next"
+            id="nextBtn"
+            aria-label="Ảnh tiếp theo"
+          >
+            ›
+          </button>
+        </div>
+
+        <div class="gallery-dots" id="galleryDots"></div>
+
+        <div class="photo-caption" id="photoCaption"></div>
+      </section>
+
+      <!-- =================================
+             SCREEN 3
+        ================================== -->
+
+      <section class="screen letter-screen">
+        <div class="letter-card">
+          <p class="small-title">ANH MUỐN NÓI MỘT ĐIỀU</p>
+
+          <h2>Người ta thường nói...</h2>
+
+          <div class="letter-text">
+            <p>Trung Thu là dịp để mọi người trở về bên nhau.</p>
+
+            <p>Nhưng với anh, Trung Thu năm nay còn đặc biệt hơn một chút.</p>
+
+            <p class="highlight">
+              Vì anh có một người mà anh muốn dành sự quan tâm.
+            </p>
+
+            <p>Một người mà mỗi khi nhìn thấy, tự nhiên anh lại mỉm cười.</p>
+
+            <p>Và người đó...</p>
+
+            <p class="big-love">là em. ❤️</p>
+          </div>
+
+          <button class="main-button" data-next>
+            CÒN MỘT ĐIỀU NỮA
+            <span>→</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- =================================
+             SCREEN 4
+        ================================== -->
+
+      <section class="screen tuyengquang-screen">
+        <div class="scene-content">
+          <p class="small-title">NẾU CÓ MỘT BUỔI TỐI...</p>
+
+          <h2>
+            Anh muốn cùng em
+            <br />
+            đi một vòng Tuyên Quang.
+          </h2>
+
+          <div class="lantern-road">
+            <div class="road-lantern l1"></div>
+            <div class="road-lantern l2"></div>
+            <div class="road-lantern l3"></div>
+            <div class="road-lantern l4"></div>
+          </div>
+
+          <p class="scene-text">
+            Cùng ngắm đèn, cùng đi dạo, cùng nói những chuyện chẳng đâu vào
+            đâu...
+          </p>
+
+          <p class="scene-text">Và nếu may mắn...</p>
+
+          <p class="highlight">anh muốn buổi tối ấy có em.</p>
+
+          <button class="main-button" data-next>
+            ĐẾN ĐIỀU CUỐI CÙNG
+            <span>❤</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- =================================
+             SCREEN 5
+        ================================== -->
+
+      <section class="screen final-screen">
+        <div class="final-content">
+          <div class="final-moon">🌕</div>
+
+          <p class="small-title">MỘT CÂU HỎI NHỎ</p>
+
+          <h2>Trung Thu này...</h2>
+
+          <p class="final-question">
+            cho anh được cùng em
+            <br />
+            đi một vòng Tuyên Quang nhé?
+          </p>
+
+          <div class="answer-buttons">
+            <button class="answer yes" id="yesBtn">ĐỒNG Ý ❤️</button>
+
+            <button class="answer maybe" id="maybeBtn">ĐỂ EM NGHĨ 🤭</button>
+          </div>
+
+          <div class="final-message" id="finalMessage"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- CONFETTI -->
+
+    <div class="confetti-container" id="confetti"></div>
+
+    <!-- SCRIPT -->
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
