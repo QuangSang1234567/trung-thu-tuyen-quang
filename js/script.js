@@ -413,34 +413,14 @@ gallery.addEventListener(
 function handleSwipe() {
   const distance = touchEndX - touchStartX;
 
-  // Nếu vuốt quá ngắn thì bỏ qua
   if (Math.abs(distance) < 40) {
     return;
   }
 
-  // ================================
-  // VUỐT SANG TRÁI
-  // ================================
-
   if (distance < 0) {
-    if (currentIndex < photos.length - 1) {
-      currentIndex++;
-      updateGallery();
-    } else {
-      showScreen(currentScreen + 1);
-    }
-  }
-
-  // ================================
-  // VUỐT SANG PHẢI
-  // ================================
-  else {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateGallery();
-    } else {
-      showScreen(currentScreen - 1);
-    }
+    nextPhoto();
+  } else {
+    previousPhoto();
   }
 }
 
