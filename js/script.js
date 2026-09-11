@@ -413,14 +413,38 @@ gallery.addEventListener(
 function handleSwipe() {
   const distance = touchEndX - touchStartX;
 
+  // Nếu vuốt quá ngắn thì bỏ qua
   if (Math.abs(distance) < 40) {
     return;
   }
 
+  // ================================
+  // VUỐT SANG TRÁI
+  // ================================
+
   if (distance < 0) {
-    nextPhoto();
-  } else {
-    previousPhoto();
+    if (currentIndex < photos.length - 1) {
+      // Chưa đến ảnh cuối
+      currentIndex++;
+      updateGallery();
+    } else {
+      // Đã ở ảnh cuối -> sang màn hình tiếp theo
+      showScreen(currentScreen + 1);
+    }
+  }
+
+  // ================================
+  // VUỐT SANG PHẢI
+  // ================================
+  else {
+    if (currentIndex > 0) {
+      // Chưa ở ảnh đầu
+      currentIndex--;
+      updateGallery();
+    } else {
+      // Đang ở ảnh đầu -> về màn hình trước
+      showScreen(currentScreen - 1);
+    }
   }
 }
 
